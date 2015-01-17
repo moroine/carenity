@@ -1,0 +1,24 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Tool:add{% endblock %}
+
+{% block body %}
+    <h1>My Loans</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Tool</th>
+                <th>Begin</th>
+                <th>End</th>
+            </tr>
+
+            {% for loan in loans %}
+                <tr>
+                    <td>{{ loan.tool.name }}</td>
+                    <td>{{ loan.begin|date('y-m-d') }}</td>
+                    <td>{{ loan.end|date('y-m-d') }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

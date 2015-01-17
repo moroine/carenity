@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Tool:add{% endblock %}
+
+{% block body %}
+    <h1>Choose a Tool to borrow</h1>
+    <div>
+        <ul>
+            {% for tool in tools %}
+                <li>
+                    <a href="{{ path('app_loan_add',{'id': tool.id}) }}">{{tool.name}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

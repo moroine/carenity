@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Comment:add{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Homepage</h1>
+    <ul>
+        <li><a href="{{ path("app_tool_index") }}">Borrow a tool</a></li>
+        <li><a href="{{ path("app_tool_add") }}">Add a Tool</a></li>
+        <li><a href="{{ path("app_loan_index") }}">Mine Loans</a></li>
+    </ul>
+{% endblock %}
